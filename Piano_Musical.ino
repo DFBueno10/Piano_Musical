@@ -58,7 +58,7 @@ int distancia ()   // Funcao que calcula e retorna a distancia em milimetros (mm
   digitalWrite(TRIG, LOW);        // Desliga o trig
   delayMicroseconds(1);           // Aguarda 1 us
   // ECHO ficara em nivel logico alto pelo mesma quantidade de tempo que o pulso demorou para voltar
-  unsigned long tempo = pulseIn(ECHO, HIGH, 20000);  //  Calcula o tempo que o pulso demorou para voltar em us
+  unsigned long tempo = pulseIn(ECHO, HIGH, 20000);  //  Calcula o tempo que o ECHO ficou em nivel logico alto em us
   int distancia = VSOM*tempo/2000;  // Calcula a distancia em milimetros (mm) e armazena da variaval distancia
   return distancia;   // Retorna o valor da distancia 
 }
